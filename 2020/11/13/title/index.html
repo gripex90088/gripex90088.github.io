@@ -15,7 +15,7 @@
 <meta property="og:description" content="头文件1#include &lt;python3.7&#x2F;Python.h&gt;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-13T01:14:18.000Z">
-<meta property="article:modified_time" content="2020-11-24T16:23:27.511Z">
+<meta property="article:modified_time" content="2020-12-08T01:02:44.849Z">
 <meta property="article:author" content="JianRong">
 <meta name="twitter:card" content="summary">
   
@@ -103,13 +103,13 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PyObject *pModule = PyImport_ImportModule(<span class="keyword">char</span> *name);</span><br><span class="line"><span class="keyword">if</span> (!pyModule)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">cerr</span> &lt;&lt;<span class="string">&quot; &quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>绑定参数 与函数调用</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pyModule = PyImport_ImportModule(<span class="string">&quot;python_file&quot;</span>);</span><br><span class="line"></span><br><span class="line">pyFunc = PyObject_GetAttrString(pyModule, <span class="string">&quot;py_func&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!pyFunc)</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*绑定参数*/</span></span><br><span class="line">pyArgs = Py_BuildValue(<span class="string">&quot;sis&quot;</span>, <span class="string">&quot;str&quot;</span>, <span class="string">&quot;int&quot;</span>, <span class="string">&quot;str&quot;</span>);</span><br><span class="line">pyResult = PyObject_CallObject(pyFunc, 	pyArgs);</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> a = PyLong_AsLong(pyResult)</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pyModule = PyImport_ImportModule(<span class="string">&quot;python_file&quot;</span>);</span><br><span class="line"></span><br><span class="line">pyFunc = PyObject_GetAttrString(pyModule, <span class="string">&quot;py_func&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!pyFunc)</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*绑定参数*/</span></span><br><span class="line">pyArgs = Py_BuildValue(<span class="string">&quot;sis&quot;</span>, <span class="string">&quot;str&quot;</span>, <span class="string">&quot;int&quot;</span>, <span class="string">&quot;str&quot;</span>);</span><br><span class="line">pyResult = PyObject_CallObject(pyFunc, 	pyArgs);</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> a = PyLong_AsLong(pyResult);</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/13/title/" data-id="ckhfkj41x0001y4o20re4from" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/13/title/" data-id="ckhzkykwa0002vto2gree0yqt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,15 +141,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/docker/" style="font-size: 10px;">docker</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -162,7 +176,11 @@
       <ul>
         
           <li>
-            <a href="/2020/11/25/AAA/">C++ 之 default &amp; delete</a>
+            <a href="/2020/12/08/delete%20&%20default/">delete &amp; default</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/08/docker-use/">docker use</a>
           </li>
         
           <li>
@@ -200,7 +218,15 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+//<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
 
 
   
