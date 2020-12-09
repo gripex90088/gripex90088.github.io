@@ -7,15 +7,15 @@
   
   <title>du磁盘分析 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看磁盘使用情况1234567891011121314151617181920212223$ du -hd 1 &#x2F; 2&gt; &#x2F;dev&#x2F;null232K    &#x2F;tmp0       &#x2F;sys16K     &#x2F;nonexistent11G     &#x2F;usr1.6M    &#x2F;run4.0K    &#x2F;mnt8.0K    &#x2F;.cache11G     &#x2F;media62G     &#x2F;data55G">
+  <meta name="description" content="du命令使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="du磁盘分析">
 <meta property="og:url" content="http://example.com/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="查看磁盘使用情况1234567891011121314151617181920212223$ du -hd 1 &#x2F; 2&gt; &#x2F;dev&#x2F;null232K    &#x2F;tmp0       &#x2F;sys16K     &#x2F;nonexistent11G     &#x2F;usr1.6M    &#x2F;run4.0K    &#x2F;mnt8.0K    &#x2F;.cache11G     &#x2F;media62G     &#x2F;data55G">
+<meta property="og:description" content="du命令使用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-08T06:09:12.000Z">
-<meta property="article:modified_time" content="2020-12-08T06:51:42.000Z">
+<meta property="article:modified_time" content="2020-12-09T06:03:14.820Z">
 <meta property="article:author" content="JianRong">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="du">
@@ -90,7 +90,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="查看磁盘使用情况"><a href="#查看磁盘使用情况" class="headerlink" title="查看磁盘使用情况"></a>查看磁盘使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> du -hd 1 / 2&gt; /dev/null</span></span><br><span class="line">232K    /tmp</span><br><span class="line">0       /sys</span><br><span class="line">16K     /nonexistent</span><br><span class="line">11G     /usr</span><br><span class="line">1.6M    /run</span><br><span class="line">4.0K    /mnt</span><br><span class="line">8.0K    /.cache</span><br><span class="line">11G     /media</span><br><span class="line">62G     /data</span><br><span class="line">55G     /home</span><br><span class="line">2.3G    /opt</span><br><span class="line">19M     /etc</span><br><span class="line">4.0K    /srv</span><br><span class="line">3.1G    /var</span><br><span class="line">57M     /go</span><br><span class="line">16K     /lost+found</span><br><span class="line">332M    /boot</span><br><span class="line">0       /proc</span><br><span class="line">4.0K    /dev</span><br><span class="line">6.7G    /recovery</span><br><span class="line">1.1G    /root</span><br><span class="line">151G    /</span><br></pre></td></tr></table></figure>
+        <p>du命令使用</p>
+<a id="more"></a>
+
+<h3 id="查看磁盘使用情况"><a href="#查看磁盘使用情况" class="headerlink" title="查看磁盘使用情况"></a>查看磁盘使用情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> du -hd 1 / 2&gt; /dev/null</span></span><br><span class="line">232K    /tmp</span><br><span class="line">0       /sys</span><br><span class="line">16K     /nonexistent</span><br><span class="line">11G     /usr</span><br><span class="line">1.6M    /run</span><br><span class="line">4.0K    /mnt</span><br><span class="line">8.0K    /.cache</span><br><span class="line">11G     /media</span><br><span class="line">62G     /data</span><br><span class="line">55G     /home</span><br><span class="line">2.3G    /opt</span><br><span class="line">19M     /etc</span><br><span class="line">4.0K    /srv</span><br><span class="line">3.1G    /var</span><br><span class="line">57M     /go</span><br><span class="line">16K     /lost+found</span><br><span class="line">332M    /boot</span><br><span class="line">0       /proc</span><br><span class="line">4.0K    /dev</span><br><span class="line">6.7G    /recovery</span><br><span class="line">1.1G    /root</span><br><span class="line">151G    /</span><br></pre></td></tr></table></figure>
 
 <h3 id="查看目录占用磁盘大小"><a href="#查看目录占用磁盘大小" class="headerlink" title="查看目录占用磁盘大小"></a>查看目录占用磁盘大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> du -sh /var/*</span></span><br><span class="line">216K    /var/backups</span><br><span class="line">735M    /var/cache</span><br><span class="line">1.8G    /var/lib</span><br><span class="line">4.0K    /var/local</span><br><span class="line">0       /var/lock</span><br><span class="line">721M    /var/log</span><br><span class="line">4.0K    /var/mail</span><br><span class="line">4.0K    /var/opt</span><br><span class="line">0       /var/run</span><br><span class="line">44K     /var/spool</span><br><span class="line">36K     /var/tmp</span><br><span class="line">884K    /var/www</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -h或–human-readable 以K，M，G为单位，提高信息的可读性;</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> -s或–summarize 仅显示总计，即当前目录的大小。</span></span><br></pre></td></tr></table></figure>
 
@@ -98,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/" data-id="ckifl7vwl00011xo2g0yw1xz8" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/" data-id="ckih0cfw500030mo2ei9xgd7l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/du/" rel="tag">du</a></li></ul>
@@ -109,10 +112,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2020/12/09/delete%20&%20default/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          delete &amp; default
+        
+      </div>
+    </a>
   
-    <a href="/2020/12/08/hexo%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2020/12/08/docker-use/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">hexo使用笔记</div>
+      <div class="article-nav-title">docker use</div>
     </a>
   
 </nav>
@@ -163,15 +175,15 @@
       <ul>
         
           <li>
+            <a href="/2020/12/09/hexo%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">hexo使用笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/09/delete%20&%20default/">delete &amp; default</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/">du磁盘分析</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/08/hexo%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">hexo使用笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/08/delete%20&%20default/">delete &amp; default</a>
           </li>
         
           <li>
