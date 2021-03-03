@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MySQL-联合索引 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MySQL联合索引的使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL-联合索引">
+<meta property="og:url" content="http://example.com/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MySQL联合索引的使用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-03T08:13:12.000Z">
+<meta property="article:modified_time" content="2021-03-03T08:18:22.750Z">
+<meta property="article:author" content="JianRong">
+<meta property="article:tag" content="MYSQL">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MySQL-联合索引" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/" class="article-date">
+  <time datetime="2021-03-03T08:13:12.000Z" itemprop="datePublished">2021-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL-联合索引
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MySQL联合索引的使用</p>
+<a id="more"></a>
+
+<h3 id="联合索引"><a href="#联合索引" class="headerlink" title="联合索引"></a>联合索引</h3><ul>
+<li><p>创建数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;student&#96; (</span><br><span class="line">  &#96;Id&#96; int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT &#39;自增Id&#39;,</span><br><span class="line">  &#96;Gid&#96; int(11) unsigned DEFAULT NULL COMMENT &#39;年级id&#39;,</span><br><span class="line">  &#96;Cid&#96; int(11) unsigned DEFAULT NULL COMMENT &#39;班级id&#39;,</span><br><span class="line">  &#96;SId&#96; int(11) unsigned DEFAULT NULL COMMENT &#39;学号&#39;,</span><br><span class="line">  &#96;Name&#96; varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT &#39;姓名&#39;,</span><br><span class="line">  PRIMARY KEY (&#96;Id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8 COLLATE&#x3D;utf8_unicode_ci;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加联合索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create unique index uni_Gid_Cid_SId on student(Gid,Cid,SId);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO &#96;student&#96; (&#96;Gid&#96;, &#96;Cid&#96;, &#96;SId&#96;, &#96;Name&#96;) VALUES (floor(rand() * rand() *rand() * 1000000000) , floor(rand() *  rand() *rand() * 1000000000) , floor(rand() * rand() * rand() *1000000000) , rand());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>explain</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#############</span><br><span class="line">########## 查询一</span><br><span class="line">mysql&gt; explain select * from student where Gid&#x3D;1 and Cid&#x3D;1;</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">| id | select_type | table   | type | possible_keys   | key             | key_len | ref         | rows | Extra       |</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">|  1 | SIMPLE      | student | ref  | uni_Gid_Cid_SId | uni_Gid_Cid_SId | 10      | const,const |    1 | Using where |</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">###########</span><br><span class="line">######## 查询二</span><br><span class="line">mysql&gt; explain select * from student where Cid&#x3D;1 and Gid&#x3D;1;</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">| id | select_type | table   | type | possible_keys   | key             | key_len | ref         | rows | Extra       |</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">|  1 | SIMPLE      | student | ref  | uni_Gid_Cid_SId | uni_Gid_Cid_SId | 10      | const,const |    1 | Using where |</span><br><span class="line">+----+-------------+---------+------+-----------------+-----------------+---------+-------------+------+-------------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Sql语句中字段的顺序不需要和联合索引中定义的字段顺序一致，查询优化器会自己调整顺序</strong>，mysql查询优化器会判断纠正这条sql语句该以什么样的顺序执行效率最高，最后才生成真正的执行计划</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>使用联合索引的作用</p>
+<ul>
+<li><p>减少开销</p>
+<p><font color=red><strong>减少开销。</strong>建一个联合索引<code>(Gid,Cid,SId)</code>，实际相当于建了<code>(Gid)、(Gid,Cid)、(Gid,Cid,SId)</code>三个索引。每多一个索引，都会增加写操作的开销和磁盘空间的开销。对于大量数据的表，使用联合索引会大大的减少开销！</font></p>
+</li>
+<li><p>覆盖索引</p>
+<p><font color=greed>覆盖索引。对联合索引(Gid,Cid,SId)，如果有如下的sql: select Gid,Cid,SId from student where Gid=1 and Cid=2。那么MySQL可以直接通过遍历索引取得数据，而无需回表，这减少了很多的随机io操作。减少io操作，特别的随机io其实是dba主要的优化策略。所以，在真正的实际应用中，覆盖索引是主要的提升性能的优化手段之一。</font></p>
+</li>
+<li><p>效率</p>
+<p><font color=blue>效率高。索引列越多，通过索引筛选出的数据越少。有1000W条数据的表，有如下sql:select from table where Gid=1 and Cid=2 and SId=3,假设假设每个条件可以筛选出10%的数据，如果只有单值索引，那么通过该索引能筛选出1000W10%=100w条数据，然后再回表从100w条数据中找到符合Gid=2 and Cid= 3的数据，然后再排序，再分页；如果是联合索引，通过索引筛选出1000w10% 10% *10%=1w，效率提升可想而知！</font></p>
+</li>
+</ul>
+</li>
+<li><p>联合索引缺点</p>
+<p><font><strong>缺点。</strong>联合索引越多，索引列越多，则创建的索引越多，索引都是存储在磁盘里的，通过索引算法(Btree代表索引算法使用二叉树的形式来做索引的)来查找数据，的确可以极大的提高查询效率，但是与此同时增删改的同时，需要更新索引，同样是需要花时间的，并且索引所占的磁盘空间也不小。</font></p>
+<h3 id="建议"><a href="#建议" class="headerlink" title="建议:"></a>建议:</h3><p><font color=red>**建议:**单表尽可能不要超过一个联合索引，单个联合索引不超过3个字段。</font></p>
+</li>
+</ul>
+<ul>
+<li><p>explain索引Type字段属性说明</p>
+<ul>
+<li><p>ALL</p>
+<p><font><strong><em>\</em>type = ALL**</strong>，全表扫描，MYSQL扫描全表来找到匹配的行</font></p>
+</li>
+<li><p>index</p>
+<p><font><strong><em>\</em>type = index**</strong>，索引全扫描，MYSQL遍历整个索引来查找匹配的行。（虽然where条件中没有用到索引，但是要取出的列title是索引包含的列，所以只要全表扫描索引即可，直接使用索引树查找数据）</font></p>
+</li>
+<li><p>range</p>
+<p><font><strong><em>*</em>*type = range*\</strong>*** ，索引范围扫描，常见于&lt;、&lt;=、&gt;、&gt;=、between等操作符（因为customer_id是索引，所以只要查找索引的某个范围即可，通过索引找到具体的数据）</font></p>
+</li>
+<li><p>ref</p>
+<p><font><strong><em>\</em>type = ref**</strong> ，使用非唯一性索引或者唯一索引的前缀扫描，返回匹配某个单独值的记录行。</font></p>
+</li>
+<li><p>eq_ref</p>
+<p><strong><em>\</em>type = eq_ref**</strong>，相对于ref来说就是使用的是唯一索引，对于每个索引键值，只有唯一的一条匹配记录（在联表查询中使用primary key或者unique key作为关联条件）<font></font></p>
+</li>
+<li><p>const/system</p>
+<p><font><strong><em>\</em>type = const/system**</strong>，单表中最多只有一条匹配行，查询起来非常迅速，所以这个匹配行中的其他列中的值可以被优化器在当前查询中当做常量来处理。例如根据主键或者唯一索引进行的查询。</font></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/" data-id="cklt5z0o80000lso2dqhs56ri" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MYSQL/" rel="tag">MYSQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80-%E5%8D%95%E9%93%BE%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据结构基础-单链表</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-LIB/" rel="tag">C LIB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPP/" rel="tag">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HIVE/" rel="tag">HIVE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MYSQL/" rel="tag">MYSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PYTHON/" rel="tag">PYTHON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PYTHON3-7-C-API/" rel="tag">PYTHON3.7 C API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/du/" rel="tag">du</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/site-document/" rel="tag">site document</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-LIB/" style="font-size: 10px;">C LIB</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CPP/" style="font-size: 10px;">CPP</a> <a href="/tags/HIVE/" style="font-size: 10px;">HIVE</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/PYTHON/" style="font-size: 10px;">PYTHON</a> <a href="/tags/PYTHON3-7-C-API/" style="font-size: 10px;">PYTHON3.7 C API</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/du/" style="font-size: 10px;">du</a> <a href="/tags/site-document/" style="font-size: 10px;">site document</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/">MySQL-联合索引</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80-%E5%8D%95%E9%93%BE%E8%A1%A8/">数据结构基础-单链表</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/02/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/">面试笔记----字符串反转</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/10/cpp11-standard/">cpp11_standard</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/10/python-use-hive/">python_use_hive</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 JianRong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+//<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
