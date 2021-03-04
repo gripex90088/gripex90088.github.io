@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>virtual关键字 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="virtual关键字的作用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="virtual关键字">
+<meta property="og:url" content="http://example.com/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="virtual关键字的作用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-04T01:56:40.000Z">
+<meta property="article:modified_time" content="2021-03-04T02:34:46.400Z">
+<meta property="article:author" content="JianRong">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-virtual关键字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/" class="article-date">
+  <time datetime="2021-03-04T01:56:40.000Z" itemprop="datePublished">2021-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      virtual关键字
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>virtual关键字的作用</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="虚函数-重写"><a href="#虚函数-重写" class="headerlink" title="虚函数: 重写"></a>虚函数: 重写</h3><ul>
+<li>常规函数</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 常规函数 */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">base</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;基类方法&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">        <span class="keyword">virtual</span> ~base() &#123;&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">inheriter</span>:</span> <span class="keyword">public</span> base</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;派生类方法&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    base *p1 = <span class="keyword">new</span> base;</span><br><span class="line">    base *p2 = <span class="keyword">new</span> inheriter;</span><br><span class="line">    p1-&gt;test();</span><br><span class="line">    p2-&gt;test();</span><br><span class="line">    <span class="comment">/* 输出:</span></span><br><span class="line"><span class="comment">    	基类函数</span></span><br><span class="line"><span class="comment">    	基类函数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello world&quot;</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>虚函数</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 虚函数 */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">vbase</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;基类方法&quot;</span> &lt;&lt; <span class="built_in">endl</span>;&#125;</span><br><span class="line">    <span class="keyword">virtual</span> ~vbase() &#123;&#125;; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">vinheriter</span>:</span> <span class="keyword">public</span> vbase</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;派生类方法&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">a</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a&quot;</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vbase *vp1 = <span class="keyword">new</span> vbase;</span><br><span class="line">    vbase *vp2 = <span class="keyword">new</span> vinheriter;</span><br><span class="line">    vp1-&gt;test();</span><br><span class="line">    vp2-&gt;test();</span><br><span class="line">   	<span class="comment">/**</span></span><br><span class="line"><span class="comment">   		输出: </span></span><br><span class="line"><span class="comment">   		基类函数</span></span><br><span class="line"><span class="comment">   		派生类函数</span></span><br><span class="line"><span class="comment">   	*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>重写: <font color=red>在基类中将被重写的成员函数设置为虚函数,其含义是: 当通过基类的指针或者引用调用该成员函数时,将根据指针指向的对象类型确定调用的函数,而非指针类型  如此，便可以将基类与派生类的同名方法区分开，实现多态。</font></strong></p>
+<p><strong><font color=blue>重写: 要求函数的特征标(参数数目, 类型,顺序)以及返回值都必须与基类函数中的函数一致</font></strong></p>
+<ul>
+<li><strong>说明：</strong></li>
+</ul>
+<p>1.只需将基类中的成员函数声明为虚函数即可，派生类中重写的virtual函数自动成为虚函数；</p>
+<p><font color=red>2.基类中的析构函数必须为虚函数，否则会出现对象释放错误。以上例说明，如果不将基类的析构函数声明为virtual，那么在调用delete p2;语句时将调用基类的析构函数，而不是应当调用的派生类的析构函数，从而出现对象释放错误的问题。</font></p>
+<p>3.虚函数的使用将导致类对象占用更大的内存空间。对这一点的解释涉及到虚函数调用的原理：编译器给每一个包括虚函数的对象添加了一个隐藏成员：指向虚函数表的指针。虚函数表（virtual function table）包含了虚函数的地址，由所有虚函数对象共享。当派生类重新定义虚函数时，则将该函数的地址添加到虚函数表中。无论一个类对象中定义了多少个虚函数，虚函数指针只有一个。相应地，每个对象在内存中的大小要比没有虚函数时大4个字节（32位主机，不包括虚析构函数）。如下：</p>
+<p>  cout&lt;&lt;sizeof(base)&lt;&lt;endl;             //12<br>  cout&lt;&lt;sizeof(inheriter)&lt;&lt;endl;          //12</p>
+<p>base类中包括了两个整型的成员变量，各占4个字节大小，再加上一个虚函数指针，共计占12个字节；inheriter类继承了base类的两个成员变量以及虚函数表指针，因此大小与基类一致。如果inheriter多重继承自另外一个也包括了虚函数的基类，那么隐藏成员就包括了两个虚函数表指针。</p>
+<p>4.重写函数的特征标必须与基类函数一致，否则将覆盖基类函数；</p>
+<p>5.重写不同于重载。我对重载的理解是：同一个类，内部的同名函数具有不同的参数列表称为重载；重写则是派生类对基类同名函数的“本地改造”，要求函数特征标完全相同。当然，返回值类型不一定相同（可能会出现返回类型协变的特殊情况）。</p>
+<h3 id="虚基类"><a href="#虚基类" class="headerlink" title="虚基类"></a><strong>虚基类</strong></h3><p><strong>说明：</strong></p>
+<p>1.若一个类多重继承自具有同一个基类的派生类时，调用同名成员函数时会出现二义性。为了解决这个问题，可以通过作用域解析运算符澄清，或者在类中进行重新定义；</p>
+<p>2.继承关系可能是非常繁复的。一个类可能多重继承自别的类，而它的父类也可能继承自别的类。当该类从不同的途径继承了两个或者更多的同名函数时，如果没有对类名限定为virtual，将导致二义性。当然，如果使用了虚基类，则不一定会导致二义性。编译器将选择继承路径上“最短”的父类成员函数加以调用。该规则与成员函数的访问控制权限并不矛盾。也就是说，不能因为具有更高调用优先级的成员函数的访问控制权限是”private”，而转而去调用public型的较低优先级的同名成员函数。</p>
+<h3 id="纯虚函数"><a href="#纯虚函数" class="headerlink" title="纯虚函数"></a><strong>纯虚函数</strong></h3><p>若一个类的成员函数被声明为纯虚函数，则意味着该类是ABC(Abstract Base Class，抽象基类)，即只能被继承，而不能用来声明对象。纯虚函数通常需要在类声明的后面加上关键词“=0”。</p>
+<p>当然，声明为纯虚函数并不意味着在实现文件中不可对其进行定义，只是意味着不可用抽象基类实现一个具体的对象。</p>
+<p>一、定义<br>　纯虚函数是在基类中声明的虚函数，它在基类中没有定义，但要求任何派生类都要定义自己的实现方法。在基类中实现纯虚函数的方法是在函数原型后加“=0”<br>　virtual void funtion1()=0</p>
+<p>二、引入原因<br>　　1、为了方便使用多态特性，我们常常需要在基类中定义虚拟函数。<br>　　2、在很多情况下，基类本身生成对象是不合情理的。例如，动物作为一个基类可以派生出老虎、孔雀等子类，但动物本身生成对象明显不合常理。<br>　　为了解决上述问题，引入了纯虚函数的概念，将函数定义为纯虚函数（方法：virtual ReturnType Function()= 0;），则编译器要求在派生类中必须予以重写以实现多态性。同时含有纯虚拟函数的类称为抽象类，它不能生成对象。这样就很好地解决了上述两个问题。<br>声明了纯虚函数的类是一个抽象类。所以，用户不能创建类的实例，只能创建它的派生类的实例。<br>纯虚函数最显著的特征是：它们必须在继承类中重新声明函数（不要后面的＝0，否则该派生类也不能实例化），而且它们在抽象类中往往没有定义。<br>定义纯虚函数的目的在于，使派生类仅仅只是继承函数的接口。<br>纯虚函数的意义，让所有的类对象（主要是派生类对象）都可以执行纯虚函数的动作，但类无法为纯虚函数提供一个合理的缺省实现。所以类纯虚函数的声明就是在告诉子类的设计者，“你必须提供一个纯虚函数的实现，但我不知道你会怎样实现它”。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/" data-id="cklu9aczf0001q1o2bawv4yq2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          重载,覆盖,隐藏
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">static关键字</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-LIB/" rel="tag">C LIB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CPP/" rel="tag">CPP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HIVE/" rel="tag">HIVE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MYSQL/" rel="tag">MYSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PYTHON/" rel="tag">PYTHON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PYTHON3-7-C-API/" rel="tag">PYTHON3.7 C API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/du/" rel="tag">du</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/site-document/" rel="tag">site document</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-LIB/" style="font-size: 10px;">C LIB</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CPP/" style="font-size: 10px;">CPP</a> <a href="/tags/HIVE/" style="font-size: 10px;">HIVE</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/PYTHON/" style="font-size: 10px;">PYTHON</a> <a href="/tags/PYTHON3-7-C-API/" style="font-size: 10px;">PYTHON3.7 C API</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/du/" style="font-size: 10px;">du</a> <a href="/tags/site-document/" style="font-size: 10px;">site document</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/">重载,覆盖,隐藏</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/">virtual关键字</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/">static关键字</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/">MySQL-联合索引</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80-%E5%8D%95%E9%93%BE%E8%A1%A8/">数据结构基础-单链表</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 JianRong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+//<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+//<![CDATA[
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/js/jquery-2.0.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+// ]]>
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

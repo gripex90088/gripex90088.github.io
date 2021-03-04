@@ -64,6 +64,147 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-重载-覆盖-隐藏" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/" class="article-date">
+  <time datetime="2021-03-04T02:14:38.000Z" itemprop="datePublished">2021-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/">重载,覆盖,隐藏</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>重载覆盖与隐藏</p>
+</blockquote>
+<p>1)．重载：成员函数具有以下的特征时发生“重载”</p>
+<p>​    A．相同的范围（同一个类中）</p>
+<p>​    B．函数的名字相同</p>
+<p>​    C．参数类型不同（不能进行隐式类型转换）</p>
+<p>​    D．Virtual关键字可有可无</p>
+<p>2)．覆盖（也叫“继承”）：指派生类函数覆盖基类函数，特征是：</p>
+<p>​    A．不同的范围（分别位于基类与派生类中）    </p>
+<p>​    B．函数名字相同</p>
+<p>​    C．参数相同</p>
+<p>​    D．基类函数必须有virtual关键字</p>
+<p>3)．隐藏：是指派生类的函数屏蔽了与其同名的基类函数，规则如下：</p>
+<p>​    A．如果派生类的函数与基类的函数同名，但是参数不同，此时不论有无virtual关键字，基类的函数都将被隐藏，注意别与重载混淆）</p>
+<p>​    B．如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual关键字，此时基类的函数被隐藏（注意别与覆盖混淆）</p>
+<p>-————————————-</p>
+<p>对隐藏的概念应该还可以简化为：基类成员函数中，不满足覆盖条件的派生类同名成员函数，都视为隐藏（既基类方法不能被派生类继承使用）。 </p>
+<p>而显然满足覆盖的充要条件是：<br>    (a) 在基类中函数声明的时候有virtual关键字<br>    (b) 基类中的函数和派生类中的函数声明一模一样即函数名，参数，返回类型都一样</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/" data-id="cklu9aczi0003q1o20dbh9ozv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-virtual关键字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/" class="article-date">
+  <time datetime="2021-03-04T01:56:40.000Z" itemprop="datePublished">2021-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/">virtual关键字</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>virtual关键字的作用</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/" data-id="cklu9aczf0001q1o2bawv4yq2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-static关键字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/" class="article-date">
+  <time datetime="2021-03-04T01:28:47.000Z" itemprop="datePublished">2021-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/">static关键字</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Static关键字作用"><a href="#Static关键字作用" class="headerlink" title="Static关键字作用"></a>Static关键字作用</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/songdanzju/p/7422380.html">https://www.cnblogs.com/songdanzju/p/7422380.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/" data-id="cklu9acz80000q1o2bzxrdfqr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-MySQL-联合索引" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/" class="article-date">
@@ -350,136 +491,12 @@
 
 
   
-    <article id="post-du磁盘分析" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/" class="article-date">
-  <time datetime="2020-12-08T06:09:12.000Z" itemprop="datePublished">2020-12-08</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/">du磁盘分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>du命令使用</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/08/du%E7%A3%81%E7%9B%98%E5%88%86%E6%9E%90/" data-id="ckih0cfw500030mo2ei9xgd7l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/du/" rel="tag">du</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-docker-use" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/08/docker-use/" class="article-date">
-  <time datetime="2020-12-08T00:42:26.000Z" itemprop="datePublished">2020-12-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/08/docker-use/">docker use</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Docker基础使用</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/12/08/docker-use/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/08/docker-use/" data-id="ckih0cfvt00000mo2fdkh81s5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-python_c_api" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/python_c_api/" class="article-date">
-  <time datetime="2020-11-13T01:14:18.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/python_c_api/">c++调用python库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Python3.7 C API学习与使用</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/11/13/python_c_api/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/13/python_c_api/" data-id="ckih0cfw700050mo268v3frec" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-LIB/" rel="tag">C LIB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PYTHON3-7-C-API/" rel="tag">PYTHON3.7 C API</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -502,7 +519,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-LIB/" style="font-size: 10px;">C LIB</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CPP/" style="font-size: 10px;">CPP</a> <a href="/tags/HIVE/" style="font-size: 10px;">HIVE</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/PYTHON/" style="font-size: 10px;">PYTHON</a> <a href="/tags/PYTHON3-7-C-API/" style="font-size: 10px;">PYTHON3.7 C API</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/du/" style="font-size: 10px;">du</a> <a href="/tags/site-document/" style="font-size: 10px;">site document</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
+      <a href="/tags/C-LIB/" style="font-size: 10px;">C LIB</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CPP/" style="font-size: 10px;">CPP</a> <a href="/tags/HIVE/" style="font-size: 10px;">HIVE</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MYSQL/" style="font-size: 10px;">MYSQL</a> <a href="/tags/PYTHON/" style="font-size: 10px;">PYTHON</a> <a href="/tags/PYTHON3-7-C-API/" style="font-size: 10px;">PYTHON3.7 C API</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/du/" style="font-size: 10px;">du</a> <a href="/tags/site-document/" style="font-size: 10px;">site document</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a>
     </div>
   </div>
 
@@ -524,23 +541,23 @@
       <ul>
         
           <li>
+            <a href="/2021/03/04/%E9%87%8D%E8%BD%BD-%E8%A6%86%E7%9B%96-%E9%9A%90%E8%97%8F/">重载,覆盖,隐藏</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/virtual%E5%85%B3%E9%94%AE%E5%AD%97/">virtual关键字</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/04/static%E5%85%B3%E9%94%AE%E5%AD%97/">static关键字</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/03/MySQL-%E8%81%94%E5%90%88%E7%B4%A2%E5%BC%95/">MySQL-联合索引</a>
           </li>
         
           <li>
             <a href="/2021/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80-%E5%8D%95%E9%93%BE%E8%A1%A8/">数据结构基础-单链表</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/02/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8D%E8%BD%AC/">面试笔记----字符串反转</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/10/cpp11-standard/">cpp11_standard</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/10/python-use-hive/">python_use_hive</a>
           </li>
         
       </ul>
