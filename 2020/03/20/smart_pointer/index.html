@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>智能指针 | GRIPEX90088</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="智能指针123456希加加没有垃圾回收，需要手动释放分配的内存，否则会造成内存泄漏。 C++提供了有效的方法智能指针。智能指针指向动态分配（堆）对象指针的类，用于生存期的控制，能够确保在离开指针作用域时，自动的销毁动态分配的对象，防止内存泄漏。智能指针的核心实现技术是引用计数，每使用一次，内部计数器加1，每析构一次内部的引用计数减1，减为0时，删除所指向的空间   共享的智能指针 std::sha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="智能指针">
+<meta property="og:url" content="http://example.com/2020/03/20/smart_pointer/index.html">
+<meta property="og:site_name" content="GRIPEX90088">
+<meta property="og:description" content="智能指针123456希加加没有垃圾回收，需要手动释放分配的内存，否则会造成内存泄漏。 C++提供了有效的方法智能指针。智能指针指向动态分配（堆）对象指针的类，用于生存期的控制，能够确保在离开指针作用域时，自动的销毁动态分配的对象，防止内存泄漏。智能指针的核心实现技术是引用计数，每使用一次，内部计数器加1，每析构一次内部的引用计数减1，减为0时，删除所指向的空间   共享的智能指针 std::sha">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-20T03:20:35.000Z">
+<meta property="article:modified_time" content="2022-11-08T01:16:34.110Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="GRIPEX90088" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GRIPEX90088</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-smart_pointer" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/03/20/smart_pointer/" class="article-date">
+  <time class="dt-published" datetime="2020-03-20T03:20:35.000Z" itemprop="datePublished">2020-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      智能指针
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">希加加没有垃圾回收，需要手动释放分配的内存，否则会造成内存泄漏。 C++提供了有效的方法智能指针。</span><br><span class="line"></span><br><span class="line">智能指针指向动态分配（堆）对象指针的类，用于生存期的控制，能够确保在离开指针作用域时，自动的</span><br><span class="line">销毁动态分配的对象，防止内存泄漏。智能指针的核心实现技术是引用计数，每使用一次，内部计数器加</span><br><span class="line"><span class="number">1</span>，每析构一次内部的引用计数减<span class="number">1</span>，减为<span class="number">0</span>时，删除所指向的空间</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>共享的智能指针 std::shard_ptr</p>
+<ol>
+<li><p>shard_ptr初始化</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">共享智能指针是指多个智能指针可以同时管理同一块有效的内存，shard_ptr是一个模版类，如果要</span><br><span class="line">进行初始化有三种方式: 通过构造函数、<span class="built_in">std</span>::make_shard辅助函数以及resset方法。共享智能</span><br><span class="line">指针对象初始化完毕之后指向了要管理的那块堆内存，如果想要查看当前有多少个智能指针同时管理</span><br><span class="line">着这块内存可以使用共享智能指针提供的成员函数use_count</span><br></pre></td></tr></table></figure></li>
+<li><p>获取原始指针</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">对应基础数据来说，通过操作智能指针和操作智能指针管理的内存效果是一样的，可以直接完成数据</span><br><span class="line">的读写。但是如果共享智能指针管理的是一个对象，那么需要取出原始内存地址再操作，可以调</span><br><span class="line">用共享指针类提供的get()方法得到原始地址</span><br></pre></td></tr></table></figure></li>
+<li><p>指定删除器</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当智能指针管理的内存对应的引用计数变为<span class="number">0</span>的时候，这块内存就会被智能指针析构掉了。 另外，我</span><br><span class="line">们在初始化智能指针的时候也可以指定删除动作， 这个删除操作对应的函数被称之为删除器，这个</span><br><span class="line">删除器函数本质是一个回调函数， 我们只需要进行实现，其调用是智能指针完成的</span><br></pre></td></tr></table></figure></li>
+<li><p>实例</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_num;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Test() : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Test(<span class="keyword">int</span> x) : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor Test, x = &quot;</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Test(<span class="built_in">string</span> str) : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor Test, str = &quot;</span> &lt;&lt; str &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~Test()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;destruct Test...&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setValue</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_num = v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;m_num: &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 构造函数初始化</span></span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">ptr1</span><span class="params">(<span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">3</span>))</span></span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr1 value is: &quot;</span> &lt;&lt; *ptr1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr1 quote counter &quot;</span> &lt;&lt; ptr1.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 移动和拷贝构造函数初始化</span></span><br><span class="line">    <span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; ptr2 = move(ptr1);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr1 quote counter &quot;</span> &lt;&lt; ptr1.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr2 quote counter &quot;</span> &lt;&lt; ptr2.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; ptr3 = ptr2;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr2 quote counter &quot;</span> &lt;&lt; ptr2.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr3 quote counter &quot;</span> &lt;&lt; ptr3.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过std::make_shared初始化</span></span><br><span class="line">    <span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; ptr4 = make_shared&lt;<span class="keyword">int</span>&gt;(<span class="number">8</span>);</span><br><span class="line">    <span class="built_in">shared_ptr</span>&lt;Test&gt; ptr5 = make_shared&lt;Test&gt;(<span class="number">7</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr5 quote counter: &quot;</span> &lt;&lt; ptr5.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">shared_ptr</span>&lt;Test&gt; ptr6 = make_shared&lt;Test&gt;(<span class="string">&quot;Good Lucky!!!&quot;</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr6 quote counter: &quot;</span> &lt;&lt; ptr6.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过reset初始化</span></span><br><span class="line">    ptr6.reset(); <span class="comment">// 重置ptr6, ptr6的引用计数为0</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;After the ptr6 quote counter is reset: &quot;</span> &lt;&lt; ptr6.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    ptr5.reset(<span class="keyword">new</span> Test(<span class="string">&quot;hello&quot;</span>));</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;After the ptr5 quote counter is reset: &quot;</span> &lt;&lt; ptr5.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;shared_ptr manager dynamic array: &quot;</span>;</span><br><span class="line">    <span class="comment">// shared_ptr管理数组， c++11</span></span><br><span class="line">    <span class="comment">// 下面这样C++11之前是错误的， C++17之前shared_ptr不支持动态数组</span></span><br><span class="line">    <span class="comment">// shared_ptr&lt;int []&gt; ptr1_array(new int[12]());</span></span><br><span class="line">    <span class="comment">// c++11动态数组类型，需要指定删除器， 否则无法做到全部释放</span></span><br><span class="line">    <span class="comment">//shared_ptr&lt;int&gt; ptr1_array_cpp11(new int[12](), std::default_delete&lt;int[]&gt;());</span></span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">ptr1_array_cpp11</span><span class="params">(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">12</span>](), [](<span class="keyword">int</span> *t)&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete ptr1_array_cpp11&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="keyword">delete</span> [] t;</span></span></span><br><span class="line"><span class="function"><span class="params">     &#125;)</span></span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;set shared_ptr dynamic array value:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">12</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;set ptr1_array_cpp11[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] = [&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        ptr1_array_cpp11.get()[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;print shared_ptr dynmic array value:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">12</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr1_array_cpp11[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;] = [&quot;</span> &lt;&lt; ptr1_array_cpp11.get()[i] &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指定删除器</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;指定删除器&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;Test&gt; <span class="title">ptr7</span><span class="params">(<span class="keyword">new</span> Test(<span class="number">100</span>), [](Test *t) &#123;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr7 destrucotr&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="keyword">delete</span> t;</span></span></span><br><span class="line"><span class="function"><span class="params">    &#125;)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">ptr2_array_cpp11</span><span class="params">(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">12</span>], [](<span class="keyword">int</span> *t)&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete ptr2_array_cpp11&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="keyword">delete</span> [] t;</span></span></span><br><span class="line"><span class="function"><span class="params">    &#125;)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>独占的智能指针 std::unique_ptr</p>
+<ol>
+<li>初始化<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unique_ptr</span>是一个独占型的智能指针，它不允许其他的智能指针共享器内部指针，可以通过他的构</span><br><span class="line">造函数初始化一个独占智能指针对象，但是不允许通过赋值将一个<span class="built_in">unique_ptr</span>赋值给另一个</span><br><span class="line"><span class="built_in">unique_ptr</span></span><br></pre></td></tr></table></figure></li>
+<li>删除器<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unique_ptr</span>指定删除器和<span class="built_in">shared_ptr</span>指定删除器是有区别的，<span class="built_in">unique_ptr</span>指定删除器需要确定</span><br><span class="line">其类型，所以不能像<span class="built_in">shared_ptr</span>那样直接指定删除器</span><br></pre></td></tr></table></figure></li>
+<li>实例<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_num;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Test() : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Test(<span class="keyword">int</span> x) : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor Test, x = &quot;</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Test(<span class="built_in">string</span> str) : m_num(<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor Test, str = &quot;</span> &lt;&lt; str &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~Test()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;destruct Test...&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setValue</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;m_num = v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;m_num: &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_num &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 通过构造函数初始化</span></span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">ptr1</span><span class="params">(<span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">3</span>))</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过移动构造函数初始化</span></span><br><span class="line">    <span class="built_in">unique_ptr</span>&lt;<span class="keyword">int</span>&gt; ptr2 = move(ptr1);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过reset初始化</span></span><br><span class="line">    ptr2.reset(<span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">7</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方法1</span></span><br><span class="line">    <span class="function"><span class="built_in">unique_ptr</span>&lt;Test&gt; <span class="title">ptr3</span><span class="params">(<span class="keyword">new</span> Test(<span class="number">66</span>))</span></span>;</span><br><span class="line">    Test* pt = ptr3.get();</span><br><span class="line">    pt-&gt;setValue(<span class="number">100</span>);</span><br><span class="line">    pt-&gt;print();</span><br><span class="line"></span><br><span class="line">    ptr3-&gt;setValue(<span class="number">1000</span>);</span><br><span class="line">    ptr3-&gt;print();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">using</span> ptrFunc = <span class="keyword">void</span>(*)(Test *);</span><br><span class="line">    unique_ptr&lt;Test, ptrFunc&gt; ptr4(new Test(&quot;hello&quot;), [](Test *t) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete ptr4&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">delete</span> t;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">unique_ptr</span>&lt;Test, function&lt;<span class="keyword">void</span>(Test*)&gt;&gt; ptr5(<span class="keyword">new</span> Test(<span class="string">&quot;hello&quot;</span>), [](Test *t)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete ptr5&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">delete</span> t;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// unique_ptr管理动态数组</span></span><br><span class="line">    <span class="comment">// cpp11可以使用下面传递数组方式直接管理动态数组</span></span><br><span class="line">    unique_ptr&lt;Test[]&gt; ptr6(new Test[3]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">unique_ptr</span>&lt;<span class="keyword">int</span> [], function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>*)&gt;&gt; ptr7_array_unique_cpp11(<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">13</span>], [](<span class="keyword">int</span> *t) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete ptr7_array_unique_cpp11&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">delete</span> [] t;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;set ptr7_array_unique_cpp11&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">13</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;set ptr7_array_unique_cpp11[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]=[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        ptr7_array_unique_cpp11[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;print ptr7_array_unique_cpp11&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">13</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;ptr7_array_unique_cpp11[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]=[&quot;</span> &lt;&lt; i&lt;&lt;<span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>弱引用的智能指针 std::weak_ptr  </p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">weak_ptr主要用于解决<span class="built_in">shared_ptr</span>循环引用问题</span><br><span class="line"></span><br><span class="line">它不共享指针，不能操作资源，用来监视shard_ptr</span><br><span class="line"></span><br><span class="line">弱引用智能指针weak_ptr可以看作是<span class="built_in">shared_ptr</span>的助手，</span><br><span class="line"></span><br><span class="line">它不管理<span class="built_in">shared_ptr</span>内部的指针，weak_ptr没有重载操作符*和-&gt;，因为它不共享指针，不操作</span><br><span class="line">资源，所以它的构造不会增加引用计数，析构不会减少引用计数，它的主要作用就是作为一个旁观者</span><br><span class="line">监视<span class="built_in">shared_ptr</span>中管理的资源是否存在</span><br></pre></td></tr></table></figure>
+<ol>
+<li>实例<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="comment">// shared_ptr&lt;B&gt; b_;</span></span><br><span class="line">   weak_ptr&lt;B&gt; b_; <span class="comment">// 解决循环引用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A() &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;construct A&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~A() &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;destructor A&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="comment">// shared_ptr&lt;A&gt; a_;</span></span><br><span class="line">    weak_ptr&lt;A&gt; a_;  <span class="comment">// 解决循环引用</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    B() &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;constructor B&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ~B() &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;destructor B&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;<span class="keyword">int</span>&gt; <span class="title">sp</span><span class="params">(<span class="keyword">new</span> <span class="keyword">int</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    weak_ptr&lt;<span class="keyword">int</span>&gt; wp1; <span class="comment">// 构造一个空weak_ptr对象</span></span><br><span class="line">    <span class="function">weak_ptr&lt;<span class="keyword">int</span>&gt; <span class="title">wp2</span><span class="params">(wp1)</span></span>; <span class="comment">// 通过一个空weak_ptr对象构造一个空weak_ptr对象</span></span><br><span class="line"></span><br><span class="line">    <span class="function">weak_ptr&lt;<span class="keyword">int</span>&gt; <span class="title">wp3</span><span class="params">(sp)</span></span>; <span class="comment">// 通过一个shared_ptr对象构造一个可用的weak_pt实例对象</span></span><br><span class="line"></span><br><span class="line">    weak_ptr&lt;<span class="keyword">int</span>&gt; wp4;</span><br><span class="line">    wp4 = sp; <span class="comment">// 通过一个shared_ptr对象构造一个可用的weak_ptr实例对象， 隐式类型转换</span></span><br><span class="line"></span><br><span class="line">    weak_ptr&lt;<span class="keyword">int</span>&gt; wp5;</span><br><span class="line">    wp5 = wp3; <span class="comment">// 通过一个weak_ptr对象构造一个weak_ptr对象</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过use_count查看所观测资源的引用计数</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; wp4.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 通过expired查看所观测资源是否已经释放</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt;  wp4.expired() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 通过lock方法获取管理所检测资源的shared_ptr对象</span></span><br><span class="line">    wp4.lock();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; wp4.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// reset方法清空对象，使其不监视任何资源</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// 利用weak_ptr解决shared_ptr循环引用的问题</span></span><br><span class="line">   <span class="comment">// 当类A与类B的成员a_与b_为shared_ptr时, 产生了循环引用，最后shared_ptr并没有执行自定义析构函数，</span></span><br><span class="line">   <span class="comment">// 将a_, b_类型修改为weak_ptr， 以解决循环引用问题</span></span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;A&gt; <span class="title">aptr</span><span class="params">(<span class="keyword">new</span> A(), [](A *t) &#123;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete A&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="keyword">delete</span> t;</span></span></span><br><span class="line"><span class="function"><span class="params">     &#125;)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">shared_ptr</span>&lt;B&gt; <span class="title">bptr</span><span class="params">(<span class="keyword">new</span> B(), [](B *t)&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;delete bptr&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="keyword">delete</span> t;</span></span></span><br><span class="line"><span class="function"><span class="params">    &#125;)</span></span>;</span><br><span class="line"></span><br><span class="line">    aptr.get()-&gt;b_ = bptr;</span><br><span class="line">    bptr.get()-&gt;a_ = aptr;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; aptr.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; bptr.use_count() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/03/20/smart_pointer/" data-id="claba8jfw001ene37akzc71z5" data-title="智能指针" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/20/type_convert/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          类型转换
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/01/attribute__c/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">__attribute__函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-thread%E3%80%81C-C/" rel="tag">Linux-thread、C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E3%80%81C-C/" rel="tag">Linux、C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E3%80%81Socket/" rel="tag">Linux、Socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis-C-C/" rel="tag">Redis-C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructor/" rel="tag">datastructor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">网络基础</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 20px;">C/C++</a> <a href="/tags/Linux-thread%E3%80%81C-C/" style="font-size: 12.5px;">Linux-thread、C/C++</a> <a href="/tags/Linux%E3%80%81C-C/" style="font-size: 10px;">Linux、C/C++</a> <a href="/tags/Linux%E3%80%81Socket/" style="font-size: 15px;">Linux、Socket</a> <a href="/tags/Redis-C-C/" style="font-size: 10px;">Redis-C/C++</a> <a href="/tags/TCP-IP/" style="font-size: 12.5px;">TCP/IP</a> <a href="/tags/datastructor/" style="font-size: 17.5px;">datastructor</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">网络基础</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/06/29/python_capi_function_base_manual/">Python3/CAPI-函数与对象调用</a>
+          </li>
+        
+          <li>
+            <a href="/2022/03/20/copy_constructor/">拷贝构造函数</a>
+          </li>
+        
+          <li>
+            <a href="/2022/01/14/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/20/bit_operator/">位运算，置位、清零、取反</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/10/network_foundation/">网络协议基础</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

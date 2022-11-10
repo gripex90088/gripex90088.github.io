@@ -71,6 +71,136 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/20/vim/" class="article-date">
+  <time class="dt-published" datetime="2021-03-20T15:29:18.000Z" itemprop="datePublished">2021-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/20/vim/">vim</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="vim-配置"><a href="#vim-配置" class="headerlink" title="vim 配置"></a>vim 配置</h3>
+        
+          <p class="article-more-link">
+            <a href="/2021/03/20/vim/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/20/vim/" data-id="claba8jfx001gne370tgi3iot" data-title="vim" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-design_model" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/20/design_model/" class="article-date">
+  <time class="dt-published" datetime="2021-03-19T16:00:00.000Z" itemprop="datePublished">2021-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/20/design_model/">设计模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>观察者模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/20/design_model/" data-id="claba8jfv0019ne37fh1wdi69" data-title="设计模式" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-linux_shm" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/02/12/linux_shm/" class="article-date">
+  <time class="dt-published" datetime="2021-02-11T16:00:00.000Z" itemprop="datePublished">2021-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/02/12/linux_shm/">共享内存</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="发送方"><a href="#发送方" class="headerlink" title="发送方"></a>发送方</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ipc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_ERR(msg) do &#123; \</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %s %d\n&quot;</span>, __FILE__, __func__, __LINE__); \</span><br><span class="line">    <span class="built_in">printf</span>(msg); \</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">-1</span>); \</span><br><span class="line">&#125; <span class="keyword">while</span> (<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">key_t</span> key;</span><br><span class="line">    <span class="keyword">int</span> shmid;</span><br><span class="line">    <span class="keyword">char</span>* over;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((key = ftok(<span class="string">&quot;a.txt&quot;</span>, <span class="string">&#x27;r&#x27;</span>)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;ftok error&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建共享内存对象</span></span><br><span class="line">    <span class="keyword">if</span> ((shmid = shmget(key, <span class="number">4096</span>, IPC_CREAT | <span class="number">0666</span>)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shmget error\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 内存映射</span></span><br><span class="line">    <span class="keyword">if</span> ((over = shmat(shmid, <span class="literal">NULL</span>, <span class="number">0</span>)) == (<span class="keyword">void</span>*)<span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shmat error\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;plese input&gt;&gt;&quot;</span>);</span><br><span class="line">        fgets(over, <span class="number">4096</span>, <span class="built_in">stdin</span>);</span><br><span class="line">        over[<span class="built_in">strlen</span>(over) - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">strncmp</span>(<span class="string">&quot;quit&quot;</span>, over, <span class="number">4</span>)) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 释放用户空间内存</span></span><br><span class="line">    <span class="keyword">if</span> (shmdt(over))&#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shmdt error\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="接收方"><a href="#接收方" class="headerlink" title="接收方"></a>接收方</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ipc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINT_ERR(msg) do &#123; \</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s %s %d\n&quot;</span>, __FILE__, __func__, __LINE__); \</span><br><span class="line">        <span class="built_in">printf</span>(msg); \</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>); \</span><br><span class="line">&#125; <span class="keyword">while</span> (<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">key_t</span> key;</span><br><span class="line">    <span class="keyword">int</span> shmid;</span><br><span class="line">    <span class="keyword">char</span>* over;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((key = ftok(<span class="string">&quot;./a.txt&quot;</span>, <span class="string">&#x27;r&#x27;</span>)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;ftok error&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建共享内存对象</span></span><br><span class="line">    <span class="keyword">if</span> ((shmid = shmget(key, <span class="number">4096</span>, IPC_CREAT | <span class="number">0666</span>)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shemget error&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((over = shmat(shmid, <span class="literal">NULL</span>, <span class="number">0</span>)) == (<span class="keyword">void</span> *)<span class="number">-1</span>) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shmat error&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">strncmp</span>(<span class="string">&quot;quit&quot;</span>, over, <span class="number">4</span>) ) <span class="keyword">break</span>;</span><br><span class="line"> <span class="comment">//       getchar();</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, over);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 释放用户空间的内存</span></span><br><span class="line">    <span class="keyword">if</span> (shmdt(over)) &#123;</span><br><span class="line">        PRINT_ERR(<span class="string">&quot;shmdt error&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 释放内核空间的内存</span></span><br><span class="line">    shmctl(shmid, IPC_RMID, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/02/12/linux_shm/" data-id="claba8jfq000sne37au7r8z95" data-title="共享内存" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux%E3%80%81C-C/" rel="tag">Linux、C/C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-linear_table" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/01/10/linear_table/" class="article-date">
@@ -102,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/10/linear_table/" data-id="cl5wpdpkg000gw337gkbn5dvc" data-title="线性表实现" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/10/linear_table/" data-id="claba8jfp000one37hmmh1vwy" data-title="线性表实现" class="article-share-link">Share</a>
       
       
       
@@ -146,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/10/TCP-IP%E5%8D%8F%E8%AE%AE%E6%97%8F/" data-id="cl5wpdpk80004w337027p8rw3" data-title="TCP/IP协议族" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/10/TCP-IP%E5%8D%8F%E8%AE%AE%E6%97%8F/" data-id="claba8jfc0001ne37aqmn2m0u" data-title="TCP/IP协议族" class="article-share-link">Share</a>
       
       
       
@@ -191,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/06/linear_catalogue/" data-id="cl5wpdpke000ew3370lorgdmo" data-title="线性表相关" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/06/linear_catalogue/" data-id="claba8jfo000lne37cza0a4bg" data-title="线性表相关" class="article-share-link">Share</a>
       
       
       
@@ -240,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/01/datastructor/" data-id="cl5wpdpkc000aw337b8my0y5n" data-title="数据结构" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/01/datastructor/" data-id="claba8jfj0009ne37cavgfrtr" data-title="数据结构" class="article-share-link">Share</a>
       
       
       
@@ -280,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/20/process_thread_sock_server/" data-id="cl6yknap00000rh37cw8p4krm" data-title="多线程多进程server" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/20/process_thread_sock_server/" data-id="claba8jfs000wne37fcgk0rrn" data-title="多线程多进程server" class="article-share-link">Share</a>
       
       
       
@@ -330,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/20/linux_socket/" data-id="cl5xsu0qj00009t370qw14jdq" data-title="Linux-Socket编程" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/20/linux_socket/" data-id="claba8jfq000qne377e3baujw" data-title="Linux-Socket编程" class="article-share-link">Share</a>
       
       
       
@@ -344,10 +474,10 @@
 
 
   
-    <article id="post-attribute__c" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-oop" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2019/10/01/attribute__c/" class="article-date">
-  <time class="dt-published" datetime="2019-10-01T02:20:03.000Z" itemprop="datePublished">2019-10-01</time>
+    <a href="/2020/10/20/oop/" class="article-date">
+  <time class="dt-published" datetime="2020-10-19T16:00:00.000Z" itemprop="datePublished">2020-10-20</time>
 </a>
     
   </div>
@@ -358,7 +488,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/10/01/attribute__c/">__attribute__函数</a>
+      <a class="p-name article-title" href="/2020/10/20/oop/">面向对象</a>
     </h1>
   
 
@@ -366,17 +496,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>在main函数之前执行程序</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((constructor)) <span class="function"><span class="keyword">void</span> <span class="title">constructor_func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Before main function\n&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>在main函数之后执行程序</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((destructor)) <span class="function"><span class="keyword">void</span> <span class="title">destructor_func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;After main function\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
+        <h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p> | 隐藏实现细节，使得代码模块化</p>
+ <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> 封装就是将抽象得到的数据和行为相结合，形成一个有机的整体，也就是将数据与操作数据的源代码进行</span><br><span class="line"> 有机的结合，形成类，其中数据和函数都是类的成员，目的在于将对象的使用者和设计者分开，提高软件</span><br><span class="line"> 的可维护性和可修改性</span><br><span class="line"></span><br><span class="line">特性</span><br><span class="line">    <span class="number">1.</span> 将属性和方法结合</span><br><span class="line">    <span class="number">2.</span> 信息隐蔽，将私有属性、私有方法隐藏起来，只留下接口给外界调用</span><br><span class="line">    <span class="number">3.</span> 实现代码重用</span><br></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p> | 扩展已存在的代码模块<br> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> 继承就是新类从已有类那里得到已有的特性。类的派生指的是从已有类产生新类的过程。</span><br><span class="line"> 原有的类称为基类或父类，产生的新类称为派生类或子类，子类继承后，可以创建子类对象来调用基类函数变量等。</span><br><span class="line"> </span><br><span class="line"> 单一继承：</span><br><span class="line">    继承自一个父类，这种继承称为单一继承，一般情况尽量使用单一继承，使用多重继承容易造成混乱问题</span><br><span class="line">    </span><br><span class="line">多重继承：</span><br><span class="line">    继承多个父类，类与类之间要用逗号隔开，类名之前要有继承权限，假如两个父类或两个基类都有某</span><br><span class="line">    个名称的变量或函数，在子类中调用时需要加类名限定符c.a::i = <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">菱形继承：</span><br><span class="line">    多重继承掺杂隔代继承<span class="number">1</span>-n<span class="number">-1</span>模式，此时需要用到虚继承，例如B，C虚拟继承与A， D再多重继承</span><br><span class="line">    B，C，否则会出错</span><br><span class="line">    </span><br><span class="line">继承与访问权限：</span><br><span class="line">    继承方式规定了如何访问继承的基类成员。继承方式指定了派生类成员以及类外对象对于从基类继承</span><br><span class="line">    来的成员的访问权限</span><br><span class="line">    </span><br><span class="line">    普通成员函数的接口总是会被继承(子类继承一份接口和一份强制实现）</span><br><span class="line">    普通虚函数被子类重写（子类继承一份接口和一份缺省实现）</span><br><span class="line">    纯虚函数只能被子类继承接口（子类继承一份接口，没有继承实现)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">访问权限：</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>继承 </span><br><span class="line">    父类<span class="keyword">public</span>    =&gt;  子类访问方式<span class="keyword">public</span></span><br><span class="line">    父类<span class="keyword">protected</span> =&gt;  子类访问方式proteted</span><br><span class="line">    父类<span class="keyword">private</span>   =&gt;  子类不可访问</span><br><span class="line"></span><br><span class="line"><span class="keyword">protected</span>继承</span><br><span class="line">    父类<span class="keyword">public</span>    =&gt; 子类访问方式<span class="keyword">protected</span></span><br><span class="line">    父类<span class="keyword">protected</span> =&gt; 子类访问方式<span class="keyword">protected</span></span><br><span class="line">    父类<span class="keyword">private</span>   =&gt; 子类不可访问</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>继承</span><br><span class="line">    父类<span class="keyword">public</span>    =&gt; 子类不可访问</span><br><span class="line">    父类<span class="keyword">protected</span> =&gt; 子类不可访问</span><br><span class="line">    父类<span class="keyword">private</span>   =&gt; 子类不可访问</span><br></pre></td></tr></table></figure></p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p> ｜ 接口重用<br> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> 一个接口多种方法， 即用同一个接口，但是效果不同</span><br><span class="line"> </span><br><span class="line"> 动态多态：</span><br><span class="line">    是指在程序运行时才能确定函数和实现的链接，此时才能确定调用哪个函数，</span><br><span class="line">    父类指针或引用能过指向子类对象，调用子类的函数，所以在编译时无法确定调用哪个函数</span><br><span class="line">    </span><br><span class="line">    使用时在父类中写一个虚函数，在子类中分别重用，用这个父类指针调用这个虚函数，</span><br><span class="line">    他实际上会调用各自子类重写的虚函数</span><br><span class="line">    </span><br><span class="line">虚函数：</span><br><span class="line">    用virtaul关键字修饰的函数： </span><br><span class="line">        本质上由虚指针和虚表控制，虚指针指向虚表中某个函数的入口，就实现了多态</span><br><span class="line">        </span><br><span class="line">纯虚函数：</span><br><span class="line">    含有至少一个纯虚函数的类叫做抽象类，因为抽象类含有纯虚函数，所以虚表是不健全的，</span><br><span class="line">    在虚表不健全的情况下不能实例化对象，子类继承基类后必须重写基类中所有的纯虚函数，</span><br><span class="line">    否则子类仍为纯虚函数子类。子类将抽象基类的纯虚函数全部重写后将虚表完善，</span><br><span class="line">    此时才能实例化对象，纯虚函数只能声明不定义，形如<span class="function">vitual <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">静态多态：</span><br><span class="line">    是在编译期就把函数链接起来，此时即可确定调用哪个函数或模版，静态多态是由模版和重载实现</span><br><span class="line">    的，在宏多态中，是通过定义变量，编译时直接把变量替换，实现宏多态。</span><br><span class="line">    </span><br><span class="line">    优点： 带来了泛型编程的概念，使得C++拥有泛型与STL；在编译期完成多态，提高运行效率，具有  </span><br><span class="line">        很强的适配行和松耦合；</span><br><span class="line">    </span><br><span class="line">    缺点： 代码可读性降低，代码调试困难；无法实现模块的分离编译；当工程很大时，编译时间不可</span><br><span class="line">        小觑；无法处理异质对象集合</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/attribute__c/" data-id="cl60w3mfb0006hl374bb11b1u" data-title="__attribute__函数" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/20/oop/" data-id="claba8jfx001jne37860l2uog" data-title="面向对象" class="article-share-link">Share</a>
       
       
       
@@ -390,107 +518,11 @@
 
 
   
-    <article id="post-base_socket" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/03/20/base_socket/" class="article-date">
-  <time class="dt-published" datetime="2019-03-20T03:50:03.000Z" itemprop="datePublished">2019-03-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/03/20/base_socket/">基础Socket</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;		// socket API</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;netinet/in.h&gt; 	// INADDR_ANY</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**********************************************</span></span><br><span class="line"><span class="comment">family: 指定使用的协议蔟: </span></span><br><span class="line"><span class="comment">    AF_INET (IPV4), </span></span><br><span class="line"><span class="comment">    AF_INET6 (IPV6), </span></span><br><span class="line"><span class="comment">    AF_LOCAL (Unix域), </span></span><br><span class="line"><span class="comment">    AF_ROUTE (路由套接字), </span></span><br><span class="line"><span class="comment">    AF_KEY (密钥套接字)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">type: 套接字类型: </span></span><br><span class="line"><span class="comment">    SOCK_STREAM (字节流套接字), </span></span><br><span class="line"><span class="comment">    SOCK_DGRAM (数据报套接字),</span></span><br><span class="line"><span class="comment">    SOCK_SEQPACKET (有序分组套接字), </span></span><br><span class="line"><span class="comment">    SOCK_RAW (原始套接字)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">protocol: 套接字协议： 如果套接字类型不为原始套接字, 参数可为0, </span></span><br><span class="line"><span class="comment">    TPPROTO_TCP (TCP传输协议), </span></span><br><span class="line"><span class="comment">    IPPROTO_UDP (UDP传输协议)， </span></span><br><span class="line"><span class="comment">    IPPROTO_SCTP (SCTP传输协议)</span></span><br><span class="line"><span class="comment">**********************************************/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socket</span><span class="params">(<span class="keyword">int</span> family, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol)</span></span>;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">/**********************************************</span></span><br><span class="line"><span class="comment">sockaddr: socket返回的套接字描述符</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">mySockAddr:指向本地IP地址的结构体指针</span></span><br><span class="line"><span class="comment">mySockAddrLen: 结构长度</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">struct sockaddr &#123;</span></span><br><span class="line"><span class="comment">    unsigned short sa_family; // 通信协议类型族</span></span><br><span class="line"><span class="comment">    char sa_data[14]; 		    // 14字节协议地址,包含socket的IP地址和端口号</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">struct sockaddr_in &#123;</span></span><br><span class="line"><span class="comment">    short int sa_family;			//	通信协议类型族</span></span><br><span class="line"><span class="comment">    unsigned short int sin_port;	// 端口号		struct in_addr sin_addr;		// IP地址</span></span><br><span class="line"><span class="comment">    unsigned char si_zero[8];		// 填充0保持以sockaddr结构体长度相同</span></span><br><span class="line"><span class="comment">&#125; </span></span><br><span class="line"><span class="comment">**********************************************/</span></span><br><span class="line">bind(<span class="keyword">int</span> sockfd, struct sockaddr *mySockAddr, <span class="keyword">int</span> mySockAddrLen);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> * <span class="number">3.</span> <span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> struct sockaddr *_serverAddr, <span class="keyword">socklen_t</span> addrlen)</span></span></span><br><span class="line"><span class="function"> * sockfd:</span></span><br><span class="line"> * 		socket函数返回套接字描述符</span><br><span class="line"> * _serverAddr:</span><br><span class="line"> * 		服务器IP地址结构指针</span><br><span class="line"> * addrlen:</span><br><span class="line"> *		结构体指针长度</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">  <span class="number">4.</span> <span class="function"><span class="keyword">int</span> <span class="title">listen</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">int</span> backlog)</span></span></span><br><span class="line"><span class="function"> * sockfd:</span></span><br><span class="line"> * 		socket函数绑定bind后套接字描述符</span><br><span class="line"> * backlog:</span><br><span class="line"> *		设置可连接客户端的最大连接数，当有多个客户端向服务器发送请求时，受到此值影响，默认<span class="number">20</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">  <span class="number">5.</span><span class="function"><span class="keyword">int</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> sockfd, struct sockaddr *client_addr, <span class="keyword">socklen_t</span> *addrlen)</span></span></span><br><span class="line"><span class="function"> *  sockfd:</span></span><br><span class="line"> *  	socket函数经过linsten后套接字描述符</span><br><span class="line"> * client_addr:</span><br><span class="line"> * 		客户端套接字接口地址结构体</span><br><span class="line"> * addrlen:</span><br><span class="line"> * 		客户端地址结构长度</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">send</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">const</span> <span class="keyword">void</span> *msg, <span class="keyword">int</span> len, <span class="keyword">int</span> flags)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">  </span></span><br><span class="line"><span class="function"> 7. <span class="keyword">int</span> <span class="title">recv</span><span class="params">(<span class="keyword">int</span> sockfd, <span class="keyword">void</span> * buf, <span class="keyword">int</span> len, unsighed <span class="keyword">int</span> flags)</span></span></span><br><span class="line"><span class="function"> * sockfd:</span></span><br><span class="line"> * 		sockfd函数的套接字描述符</span><br><span class="line"> * msg:</span><br><span class="line"> * 		发送数据的指针</span><br><span class="line"> * buf:</span><br><span class="line"> * 		存放接收数据的缓冲区</span><br><span class="line"> * len:</span><br><span class="line"> * 		数据的长度,把flags设置为<span class="number">0</span></span><br><span class="line"> ************************************************/</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * baseTcp.c</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  Created on: Aug 25, 2019</span></span><br><span class="line"><span class="comment"> *      Author: JianRong</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*******************************************************************************************************************</span></span><br><span class="line"><span class="comment">*******************************************************************************************************************/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sfd, cfd;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv_addr</span>, <span class="title">client_addr</span>;</span></span><br><span class="line">    <span class="keyword">socklen_t</span> addr_len;</span><br><span class="line"></span><br><span class="line">    sfd = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">    serv_addr.sin_family = AF_INET;</span><br><span class="line">    serv_addr.sin_port = htons(<span class="number">8083</span>);</span><br><span class="line">    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);</span><br><span class="line"></span><br><span class="line">    bind (sfd, (struct sockaddr *)&amp;serv_addr, <span class="keyword">sizeof</span>(serv_addr));</span><br><span class="line">    listen(sfd, <span class="number">128</span>);</span><br><span class="line"></span><br><span class="line">    addr_len = <span class="keyword">sizeof</span>(client_addr);</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        cfd = accept(sfd, (struct sockaddr *)&amp;client_addr, &amp;addr_len);</span><br><span class="line">        <span class="keyword">if</span> (cfd == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;accept failed\n&quot;</span>;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; cfd &lt;&lt; <span class="string">&quot; join\n&quot;</span>;</span><br><span class="line">        <span class="keyword">char</span> buff[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> n = read(cfd, buff, <span class="keyword">sizeof</span>(buff));</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">                buff[i] = <span class="built_in">toupper</span>(buff[i]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            write(cfd, buff, n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// recv</span></span><br><span class="line">        <span class="comment">// send</span></span><br><span class="line">        close(cfd);</span><br><span class="line">    &#125;</span><br><span class="line">    close(cfd);</span><br><span class="line">    close (sfd);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>test<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nc 127.0.0.1 8083</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/03/20/base_socket/" data-id="cl60u6awh0003hl372r3xef73" data-title="基础Socket" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux%E3%80%81Socket/" rel="tag">Linux、Socket</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-redis_using" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/02/05/redis_using/" class="article-date">
-  <time class="dt-published" datetime="2019-02-05T01:10:35.000Z" itemprop="datePublished">2019-02-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2019/02/05/redis_using/">redis使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>安装Redis<br>  <a target="_blank" rel="noopener" href="https://www.runoob.com/redis/redis-install.html">https://www.runoob.com/redis/redis-install.html</a></li>
-<li>安装hiredis<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd redis-6.0.8/deps/hiredis</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2019/02/05/redis_using/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/02/05/redis_using/" data-id="cl5wr1rqk00003237drxr5cog" data-title="redis使用" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis-C-C/" rel="tag">Redis-C/C++</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -504,7 +536,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E3%80%81Socket/" rel="tag">Linux、Socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis-C-C/" rel="tag">Redis-C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructor/" rel="tag">datastructor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">网络基础</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-thread%E3%80%81C-C/" rel="tag">Linux-thread、C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E3%80%81C-C/" rel="tag">Linux、C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E3%80%81Socket/" rel="tag">Linux、Socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis-C-C/" rel="tag">Redis-C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datastructor/" rel="tag">datastructor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" rel="tag">网络基础</a></li></ul>
     </div>
   </div>
 
@@ -514,7 +546,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-C/" style="font-size: 16.67px;">C/C++</a> <a href="/tags/Linux%E3%80%81Socket/" style="font-size: 16.67px;">Linux、Socket</a> <a href="/tags/Redis-C-C/" style="font-size: 10px;">Redis-C/C++</a> <a href="/tags/TCP-IP/" style="font-size: 13.33px;">TCP/IP</a> <a href="/tags/datastructor/" style="font-size: 20px;">datastructor</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">网络基础</a>
+      <a href="/tags/C-C/" style="font-size: 20px;">C/C++</a> <a href="/tags/Linux-thread%E3%80%81C-C/" style="font-size: 12.5px;">Linux-thread、C/C++</a> <a href="/tags/Linux%E3%80%81C-C/" style="font-size: 10px;">Linux、C/C++</a> <a href="/tags/Linux%E3%80%81Socket/" style="font-size: 15px;">Linux、Socket</a> <a href="/tags/Redis-C-C/" style="font-size: 10px;">Redis-C/C++</a> <a href="/tags/TCP-IP/" style="font-size: 12.5px;">TCP/IP</a> <a href="/tags/datastructor/" style="font-size: 17.5px;">datastructor</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">网络基础</a>
     </div>
   </div>
 
@@ -523,7 +555,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li></ul>
     </div>
   </div>
 
@@ -540,19 +572,19 @@
           </li>
         
           <li>
+            <a href="/2022/03/20/copy_constructor/">拷贝构造函数</a>
+          </li>
+        
+          <li>
             <a href="/2022/01/14/hello-world/">Hello World</a>
           </li>
         
           <li>
+            <a href="/2021/10/20/bit_operator/">位运算，置位、清零、取反</a>
+          </li>
+        
+          <li>
             <a href="/2021/09/10/network_foundation/">网络协议基础</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/10/Python-CAPI/">Python/C API 索引</a>
-          </li>
-        
-          <li>
-            <a href="/2021/07/05/speed_pointer/">快慢指针</a>
           </li>
         
       </ul>
